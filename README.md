@@ -1,9 +1,9 @@
 # POKEDEX
 
 Nome dos integrantes: 
-- Brenda Semionato
+- Brenda Simionato
 - Hugo Brito
-- Rommel Diás
+- Rommel Rios
 
 Link do Surge:
 
