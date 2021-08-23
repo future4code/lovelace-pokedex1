@@ -1,11 +1,11 @@
 # POKEDEX
 
 Nome dos integrantes: 
-- Pessoa 1
-- Pessoa 2
-- Pessoa 3
+- Brenda Semionato
+- Hugo Brito
+- Rommel Diás
 
-Link do Surge: www.link.com.br
+Link do Surge:
 
 O que funciona:
 - Item 1
