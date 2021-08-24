@@ -1,5 +1,5 @@
 import React from 'react'
-import Router from './Router'
+import Router from './Route/Router'
 import styled from 'styled-components'
 
 const Container = styled.div``

@@ -21,12 +21,8 @@ export default function HomePage() {
     return (
 
         <Container>
-
-            {/* <link to={'/pokdex'}>Pokedéx</link> */}
             <button onClick={goToPokedex}>Pokedéx</button>
             <button onClick={goToDetails}>Detalhes</button>
-
-
         </Container>
 
     )
