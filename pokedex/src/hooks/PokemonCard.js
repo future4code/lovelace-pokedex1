@@ -23,14 +23,14 @@ max-height: 360px;
 const Button = styled.button``
 const Name = styled.span``
 
-const PokemonCard = (props) => {    
+const PokemonCard = (props) => {
     return (
         <ProductCard>
             <Card>
-                <Picture src={props.pokemon.sprites.front_default}/>
+                <Picture src={props.pokemon.sprites.front_default} />
                 <Name>{props.pokemon.name}</Name>
-                <Button>Adicionar ao Pokedex</Button>               
-                <Button>Ver detalhes</Button>               
+                <Button>Adicionar ao Pokedex</Button>
+                <Button>Ver detalhes</Button>
             </Card>
         </ProductCard>
     )
