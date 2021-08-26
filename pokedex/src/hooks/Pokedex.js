@@ -23,7 +23,7 @@ export default function Pokedex() {
 
             <button onClick={goBack}>Voltar</button>
             <button onClick={goToDetails}>Ver detalhes</button>
-            
+
         </Container>
     )
 }
