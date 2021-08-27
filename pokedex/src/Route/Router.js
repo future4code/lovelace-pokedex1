@@ -4,29 +4,23 @@ import DetailsPokemons from '../hooks/DetailsPokemons'
 import HomePage from '../hooks/HomePage'
 import Pokedex from '../hooks/Pokedex'
 
-
 export default function Router() {
 
 
     return (
 
         <BrowserRouter>
-
             <Switch>
                 <Route exact path={"/"}>
-                    <HomePage></HomePage>
+                    <HomePage/>
                 </Route>
-
                 <Route exact path={"/pokedex"}>
-                    <Pokedex></Pokedex>
+                    <Pokedex/>
                 </Route>
-
                 <Route exact path={"/details"}>
                     <DetailsPokemons></DetailsPokemons>
                 </Route>
             </Switch>
-
-
         </BrowserRouter>
 
     )
