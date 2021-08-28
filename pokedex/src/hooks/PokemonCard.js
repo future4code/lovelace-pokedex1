@@ -38,6 +38,11 @@ const PokemonCard = (props) => {
     // const [pokemons, setPokemons] = useState ([])
     // const [pokedex, setPokedex] = useState ([])
 
+    const history = useHistory()
+    const goToDetails = (pokemonName) => {
+      history.push("/details/" + pokemonName)
+    }
+
     const addToPokedex = () => {
         const pokeIndex = state.pokemons.findIndex(
             (item) => item.name === props.pokemon.name
@@ -91,7 +96,7 @@ const PokemonCard = (props) => {
                     <button onClick={props.isPokedex ? removeFromPokedex : addToPokedex}>
                                {props.isPokedex ? "Remover da Pokédex" : "Adicionar a Pokédex"}
                     </button>
-                    <Button>Ver detalhes</Button>
+                    <button onClick={() => goToDetails(props.pokemon.name)}>Ver detalhes</button>
                 </div>
             </Card>
         </ProductCard>

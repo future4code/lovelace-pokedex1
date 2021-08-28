@@ -57,9 +57,6 @@ export default function HomePage() {
     const goToPokedex = () => {
         history.push("/pokedex")
     }
-    const goToDetails = () => {
-        history.push("/details")
-    }
     //Global State=======================
     // const { pokemons } = useContext(GlobalStateContext)
     const { state, setters } = useContext(GlobalStateContext)
@@ -77,7 +74,6 @@ export default function HomePage() {
     return (
         <Container>
             <button onClick={goToPokedex}>Pokedéx</button>
-            <button onClick={goToDetails}>Detalhes</button>
             <BoxProduto>
             {state.pokemons &&
              state.pokemons.map((pokemon) => {

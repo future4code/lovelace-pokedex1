@@ -25,7 +25,7 @@ export default function Pokedex() {
         history.goBack()
     }
     const goToDetails = () => {
-        history.push("/details")
+        history.push("/details/:name")
     }
     //Global State ===============================
     const { state, setter } = useContext(GlobalStateContext)
