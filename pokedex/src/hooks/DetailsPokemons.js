@@ -3,7 +3,29 @@ import { useEffect, useState } from 'react'
 import { useHistory, useParams } from 'react-router-dom'
 import axios from 'axios'
 
-const Container = styled.div``
+export const Container = styled.main`
+    height: 80vh;
+    width: 100vh;
+    margin: 20px 10vw;
+    display: flex;
+    justify-content: space-between;
+`
+
+export const ImageConteiner = styled.div`
+    display: flex;
+    align-self: flex-start;
+    justify-content: flex-start; 
+    flex-direction: column;
+    margin: 10px;
+    border: 1px  grey;
+    padding: 5px;
+    box-shadow : 0 0 20px -5px rgb(0,0,0, .5);
+    background-color : #E7E0C9;
+`
+export const Img = styled.img`
+  height: 15vh;
+`;
+
 
 
 export default function DetailsPokemons() {
@@ -16,11 +38,9 @@ export default function DetailsPokemons() {
     const { name } = useParams()
 
     const history = useHistory()
-
     const goToHome = () => {
         history.push("/")
     }
-
     const goToPokedex = () => {
         history.push("/pokedex")
     }
@@ -55,45 +75,43 @@ export default function DetailsPokemons() {
 
 
     return (
-        <Container>
-
-            <div>
-                <img src={imageFront}></img>
-            </div>
-            <div>
-                <img src={imageBack}></img>
-            </div>
-            <div>
-                <h4>Poderes</h4>
-                {stats.map(stat => {
-                    return (
-                        <div>
-                            <span><b>{stat.stat.name}: </b></span>
-                            <span>{stat.base_stat}</span>
-                        </div>
-                    )
-                })}
-            </div>
-            <div>
-                {types.map(type => {
-                    return (
-                        <div>{type.type.name}</div>
-                    )
-                })}
-            </div>
-            <div>
-                <h4>Principais ataques</h4>
-                {moves.slice(0, 5).map(move => {
-                    return (
-                        <span>{move.move.name}</span>
-                    )
-                })}
-            </div>
-
-            <button onClick={goToHome}>Voltar</button>
-            <button onClick={goToPokedex}>Pokedéx</button>
-
-        </Container>
+        <div>
+                <button onClick={goToHome}>Voltar</button>
+                <button onClick={goToPokedex}>Pokedéx</button>
+            <Container>
+                <ImageConteiner>
+                    <Img src={imageFront}/>            
+                    <Img src={imageBack}/>
+                </ImageConteiner>
+                <div>
+                    <h4>Poderes</h4>
+                    {stats.map(stat => {
+                        return (
+                            <div>
+                                <span><b>{stat.stat.name}: </b></span>
+                                <span>{stat.base_stat}</span>
+                            </div>
+                        )
+                    })}
+                </div>
+                <div>
+                    <h4>Tipo</h4>
+                    {types.map(type => {
+                        return (
+                            <div>{type.type.name}</div>
+                        )
+                    })}
+                </div>
+                <div>
+                    <h4>Principais ataques</h4>
+                    {moves.slice(0, 5).map(move => {
+                        return (
+                            <span>{move.move.name}</span>
+                        )
+                    })}
+                </div>
+            </Container>
+        </div>
     )
 }
 
