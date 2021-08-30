@@ -5,12 +5,13 @@ Nome dos integrantes:
 - Hugo Brito
 - Rommel Rios
 
-Link do Surge:
+Link do Surge: http://poor-smell.surge.sh/
 
 O que funciona:
-- Item 1
-- Item 2
+- Listado de pokemons com seus botões
+- Paginação de 20 pokemons por pagina.
+- Função adicionar ao pokedex.
+- Pokedex com a lista dos pokemons selecionados.
 
 O que não funciona: 
-- Item 3
-- Item 4
+
